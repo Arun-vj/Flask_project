@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="header">
+        <h1>User Management Using Python And Flask</h1>
+    </div>
+    <p><a href="{{url_for('adduser')}}">Add Employee</a></p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Job_Role</th>
+            <th>Salary</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for datas in datas %}
+        <tr>
+            <td>{{datas.id}}</td>
+            <td>{{datas.name}}</td>
+            <td>{{datas.job_role}}</td>
+            <td>{{datas.salary}}</td>
+            <td><a href="{{url_for('edituser',id=datas.id)}}">Edit</a></td>
+            <td><a onclick="return confirm ('Are you sure to delete')" href="{{url_for('deleteuser',id=datas.id)}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

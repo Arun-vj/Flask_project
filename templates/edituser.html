@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Edit Employee Details</h1>
+    </div>
+    <div class="formstyle">
+    <form action="" method="post">
+        <h3>Employee Details</h3>
+        <label for="user">Employee Name</label><br>
+        <input type="text" name="name" value="{{datas.name}}" required><br>
+        <label for="job">Job Description</label><br>
+        <input type="text" name="job" value="{{datas.job_role}}" required ><br>
+        <label for="sal">Salary to given</label><br>
+        <input type="text" name="salary" value="{{datas.salary}}"  required><br>
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
