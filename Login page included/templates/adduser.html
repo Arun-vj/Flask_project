@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adduser</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div class="adduser">
+    <h1>Add Employee</h1>
+    <form action="" method="post">
+        <label for="Username">Name</label><br>
+        <input type="text" name="name" id=""><br>
+        <label for="Username">job_role</label><br>
+        <input type="text" name="job" id=""><br>
+        <label for="Username">salary</label><br>
+        <input type="text" name="sal" id=""><br>
+        <button>Submit</button>
+    </form><br><br>
+    <a id="return" href="{{url_for('home')}}">Return Home</a>
+</div>
+</body>
+</html>

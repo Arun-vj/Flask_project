@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <a id="add" href="{{url_for('adduser')}}">Add Employee</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Job_role</th>
+            <th>salary</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {%for data in datas%}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.job_role}}</td>
+            <td>{{data.salary}}</td>
+            <td><a id="Edit" href="{{url_for('edituser',id=data.id)}}">Edit</a></td>
+            <td><a id="Delete" onclick="return confirm('Are you sure to remove ?')" href="{{url_for('deleteuser',id=data.id)}}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
