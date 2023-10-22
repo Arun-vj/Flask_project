@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System using Python & Flask</h1>
+        <hr>
+        <br>
+        <a id="ad" href="{{url_for('addemp')}}">Add Employee</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Job Role</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        {%for carry in carry%}
+            <tr>
+                <td>{{carry.id}}</td>
+                <td>{{carry.name}}</td>
+                <td>{{carry.job_role}}</td>
+                <td>{{carry.salary}}</td>
+                <td><a id="Edit" href="{{url_for('editemp',id=carry.id)}}">Edit</a></td>
+                <td><a id="delete" onclick="return confirm('Are you sure to Remove?')" href="{{url_for('deleteemp',id=carry.id)}}">Delete</td>
+            </tr>
+        {%endfor%}
+        </table>
+    </div>
+</body>
+</html>

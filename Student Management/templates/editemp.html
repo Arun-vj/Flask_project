@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Employee</title>
+</head>
+<body>
+    <h1>Add New Employee</h1>
+    <hr>
+    <br>
+    <a id='return' href="{{url_for('home')}}">Return to Home</a>
+    <div class="formstyle">
+    <form action="" method="post">
+        <label for="ename">Empolyee name</label><br>
+        <input type="text" name="ename" value="{{carry.name}}" required><br>
+        <label for="jobdes">Job Description</label><br>
+        <input type="text" name="job" id="" value="{{carry.job_role}}" required><br>
+        <label for="Salary">Salary</label><br>
+        <input type="text" name="sal" value="{{carry.salary}}" required><br>
+        <button>Submit</button>
+    </form>
+</div>
+</body>
+</html>
