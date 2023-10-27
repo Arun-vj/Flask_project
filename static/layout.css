@@ -1,0 +1,124 @@
+body{
+    background-color:  #00c9a7;
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+h1{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: #202932;
+    border-radius: 5px;
+    text-transform: uppercase;
+    width: 30%;
+    padding: 20px 0px 20px 0px;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+h3 a{
+    background-color: orange;
+    color: black;
+    width: 100px;
+    padding-left: 10px;
+    padding: 8px;
+    border-radius: 9px;
+}
+h3 a:hover{
+    background-color: green;
+    color: white;
+}
+.computer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.accounts{
+    display: flex;
+    flex-wrap: wrap;
+}
+p{
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 25%;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+
+button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #00c9a7;
+    color: white;
+    margin-top: 20px;
+}
+
+table{
+    width: 100%;
+    font-size: large;
+    padding: 0px;
+    background-color: #202932;
+    border-radius: 5px;
+    color: white;
+}
+
+th{
+    text-transform: uppercase;
+    background-color: #202932;
+    padding: 10px;
+    color: white;
+}
+td{
+    border: 0.5px solid black;
+    padding: 8px;
+}
+
+#hname{
+    background-color: #00c9a7;
+    color: white;
+}
+#hsal{
+    background-color: #00c9a7;
+    color: white;
+}
+#hdel{
+    background-color: #00c9a7;
+    color: white;
+}
+
+#hemp{
+    font-size: 22px;
+}
+
+#bedit a{
+    background-color: yellow;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 5px;
+}
+
+#bdelete a{
+    background-color: red;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+ul{
+    display: flex;
+    float: right;
+    padding-left: 10px;
+}
+ul li{
+    list-style-type: none;
+    padding-left: 12px;
+}

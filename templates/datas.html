@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage data</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='layout.css')}}" type="text/css">
+</head>
+<body>
+    <ul>
+        <li><h3><a href="{{url_for('addemp')}}">Add user</a></h3></li>
+        <li><h3><a href="{{url_for('login')}}">Signout :(</a></h3></li>
+    </ul>
+<table>
+    <tr>
+        <th colspan="6" id="hemp">Empyolee Database</th>
+    </tr>
+    <tr>
+        <th>Id</th>
+        <th id="hname"> name</th>
+        <th>Job_role</th>
+        <th id="hsal">salary</th>
+        <th>edit</th>
+        <th id="hdel">delete</th>
+    </tr>
+    {% for i in output %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.job_role}}</td>
+        <td>{{i.salary}}</td>
+        <td id="bedit"><a href="{{url_for('editemp',id=i.id)}}">Edit</a></td>
+        <td id="bdelete"><a href="{{url_for('delemp',id=i.id)}}" onclick="return confirm('Are you sure to delete?')">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
